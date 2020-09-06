@@ -1,0 +1,42 @@
+- profile:
+  initials: YT
+  name: Yusuf Tezcan
+  email: yusuftezcan@gmail.com
+  profession: System Administrator
+  image: images/profile.jpg
+  location: Istanbul, TURKEY
+  relocation: true
+  company: İstanbul Özel Saint-Joseph Fransız Lisesi
+  for_hire: false
+  focus: Docker, Kubernetes
+  focus_url: https://www.docker.com/
+  about: |
+    10 years experience in System Administration with 6 years of hand on experience managing virtual servers on VMware
+
+    Experience in ticketing system with JIRA
+
+    Active Directory and GSuite, Office365 knowledge
+
+    Experience with cloud infrastructure on AWS
+
+    Strong knowledge in containers and orchestration tools like Docker, Kubernetes
+
+    General familiarity with monitoring/troubleshooting. Most importantly the ability to address an issue, and trace it back to a root cause
+
+    Self learner and worker
+
+    I am a great team player who knows how to solve complex issues in conjunction with others
+
+  skills:
+    - Server Administration
+    - Customer Experience
+    - Troubleshooting
+  tools:
+    - VMware
+    - Microsoft Servers
+    - Linux Servers CentOS/Ubuntu/Debian
+  budget:
+    currency: €
+    min: 5
+    max: 30
+    default: 10

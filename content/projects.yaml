@@ -1,0 +1,55 @@
+- name: ICSI (International CyberSecurity Institute), UK
+  url:
+  description: ICSI | CNSS Certified Network Security Specialist
+  status: live
+  tags:
+  icon:
+
+- name: Microsoft
+  url:
+  description: Microsoft Certified Trainer 2020-2021
+  status: live
+  tags:
+  icon:
+
+- name: IBM
+  url:
+  description: Enterprise Design Thinking - Team Essentials for AI
+  status: live
+  tags:
+  icon:
+
+- name: IBM
+  url:
+  description: Enterprise Design Thinking Practitioner
+  status: live
+  tags:
+  icon:
+
+- name: IBM
+  url:
+  description: IBM Cloud Essentials
+  status: live
+  tags:
+  icon:
+
+- name: IBM
+  url:
+  description: IBM Cloud Kubernetes Service
+  status: live
+  tags:
+  icon:
+
+- name: Microsoft
+  url:
+  description: MS Server Virtualization with Windows Server Hyper-V and System Center
+  status: live
+  tags:
+  icon:
+
+- name: Google
+  url:
+  description: MS Google Certified Educator
+  status: live
+  tags:
+  icon:
