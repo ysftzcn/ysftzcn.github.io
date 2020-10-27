@@ -6,3 +6,5 @@ categories: jekyll update
 ---
 
 This is first Powershell code !
+
+![My helpful screenshot](/assets/powershell.jpg)
