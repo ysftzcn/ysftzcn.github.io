@@ -21,10 +21,10 @@
 title: Yusuf TEZCAN - A System Adminisrator
 email: yusuftezcan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my blog for sharing any information about the System Administrator
+  This is my blog for sharing any information about the System Administration
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: tzcnysf
+instagram_username: tzcnysf
 github_username: ysftzcn
 
 # Build settings
