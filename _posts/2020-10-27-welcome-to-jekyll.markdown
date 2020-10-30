@@ -3,7 +3,7 @@ layout: post
 title: "Welcome to Jekyll!"
 date: 2020-10-27 14:49:29 +0300
 categories: jekyll
-permalink: /:title.ruby
+permalink: /:title
 ---
 
 Ramossi
