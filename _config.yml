@@ -7,46 +7,50 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
-title: Kurbik
-email: yusuftezcan@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This is my blog for sharing any information about the System Administration
+title: frontstuff
+email: yo@frontstuff.io
+description: > # this means to ignore newlines until "baseurl:"
+  Front-end web developer with a taste for design and typography.
+  Insights on HTML, CSS and Javascript, UI/UX and any other front stuff.
+short_description: Front-end web developer with a taste for design and typography.
+author: Sarah Dayan
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-instagram_username: tzcnysf
-github_username: ysftzcn
+permalink: /:title
+url: "https://frontstuff.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: sarahdayan
+twitter_username: frontstuff_io
+comments: false
+
+# Paginate settings
+paginate: 5
+paginate_path: "/page/:num"
 
 # Build settings
+assets:
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE > 9"
+sass:
+  style: compressed
+markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+gems:
+  - jekyll-assets
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+algolia:
+  application_id: HSORS1ROJD
+  index_name: frontstuff
