@@ -16,14 +16,14 @@ Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.Application]::EnableVisualStyles()
 {% endhighlight %}
 
-{% highlight sh %}
+{% highlight html %}
 $Form = New-Object system.Windows.Forms.Form
 $Form.ClientSize = New-Object System.Drawing.Point(450, 570)
 $Form.text = "SJ Password Reset Tool"
 $Form.TopMost = $false
 $Form.MaximizeBox = $false
 $Form.StartPosition = "CenterScreen"
-\$Form.FormBorderStyle = "FixedDialog"
+$Form.FormBorderStyle = "FixedDialog"
 {% endhighlight %}
 
 {% highlight powershell %}
@@ -61,7 +61,7 @@ $UserNameTxtBox.multiline = $false
 $UserNameTxtBox.width = 252
 $UserNameTxtBox.height = 20
 $UserNameTxtBox.location = New-Object System.Drawing.Point(50, 68)
-\$UserNameTxtBox.Font = New-Object System.Drawing.Font('Montserrat', 12)
+$UserNameTxtBox.Font = New-Object System.Drawing.Font('Montserrat', 12)
 {% endhighlight %}
 
 {% highlight powershell %}
@@ -91,7 +91,7 @@ $ResultText.width = 350
 $ResultText.height = 300
 $ResultText.location = New-Object System.Drawing.Point(50, 200)
 $ResultText.Font = New-Object System.Drawing.Font('Montserrat', 12)
-$ResultText.multiline = \$true
+$ResultText.multiline = $true
 {% endhighlight %}
 
 {% highlight powershell %}
@@ -105,9 +105,9 @@ $ErrorText.ForeColor = [System.Drawing.ColorTranslator]::FromHtml("#d0021b")
 {% endhighlight %}
 
 {% highlight powershell %}
-$Form.controls.AddRange(@($Label1, $UserNameTxtBox, $Button1, $ResultText, $ErrorText, $Pb_Logo, $Label2,\$Label3 ))
+$Form.controls.AddRange(@($Label1, $UserNameTxtBox, $Button1, $ResultText, $ErrorText, $Pb_Logo, $Label2,$Label3 ))
 {% endhighlight %}
 
 {% highlight html %}
-\$Button1.Add_Click({ reset-password })
+$Button1.Add_Click({ reset-password })
 {% endhighlight %}
