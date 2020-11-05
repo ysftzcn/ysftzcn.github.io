@@ -11,20 +11,37 @@ Active Directory yöneticileri için, basit bir şifre sıfırlama scripti oluş
 
 ## Form
 
+İlk olarak Windows Form kütüphanesini ekliyoruz. 
+
 {% highlight Powershell %}
 Add-Type -AssemblyName System.Windows.Forms
+
 [System.Windows.Forms.Application]::EnableVisualStyles()
 {% endhighlight %}
 
-{% highlight html %}
+
+
+Form özelliklerini tanımlıyoruz.
+
+**ClientSize**, boyutları içerir.
+
+**MaximizeBox**, tam ekran kontrolünü içerir.
+
+**FormBorderStyle**, kullanıcının formu ölçeklendirmesini kontrol eder.
+
+{% highlight Powershell %}
 $Form = New-Object system.Windows.Forms.Form
 $Form.ClientSize = New-Object System.Drawing.Point(450, 570)
-$Form.text = "SJ Password Reset Tool"
+$Form.text = "Password Reset Tool"
 $Form.TopMost = $false
 $Form.MaximizeBox = $false
 $Form.StartPosition = "CenterScreen"
 $Form.FormBorderStyle = "FixedDialog"
 {% endhighlight %}
+
+
+
+Forma bir resim yada icon ekliyoruz.
 
 {% highlight powershell %}
 $Pb_Logo = New-Object system.Windows.Forms.PictureBox
@@ -34,6 +51,10 @@ $Pb_Logo.location = New-Object System.Drawing.Point(385, 505)
 $Pb_Logo.imageLocation = "https://www.sj.k12.tr/images/stories/responsive/101/sj-150-flat.png"
 $Pb_Logo.SizeMode = [System.Windows.Forms.PictureBoxSizeMode]::zoom
 {% endhighlight %}
+
+
+
+Bir **Label** oluşturuyoruz.
 
 {% highlight powershell %}
 $Label1 = New-Object system.Windows.Forms.Label
@@ -108,6 +129,6 @@ $ErrorText.ForeColor = [System.Drawing.ColorTranslator]::FromHtml("#d0021b")
 $Form.controls.AddRange(@($Label1, $UserNameTxtBox, $Button1, $ResultText, $ErrorText, $Pb_Logo, $Label2,$Label3 ))
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight Powershell %}
 $Button1.Add_Click({ reset-password })
 {% endhighlight %}
