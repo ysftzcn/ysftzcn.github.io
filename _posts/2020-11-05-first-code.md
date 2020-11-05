@@ -5,18 +5,18 @@ date: 2020-11-05 07:00:00 +0200
 comments: true
 ---
 
-Active Directory kullanıcıları için, basit bir şifre sıfırlama scripti oluşturdum.
+Active Directory yöneticileri için, basit bir şifre sıfırlama scripti oluşturdum.
 
 **Powershell GUI** kullanmak isteyen ve bu konuda nereden başlayacağını bilemeyen arkadaşlarım için detaylı bir şekilde bu konuların üzerinden geçmeye çalışacağım.
 
 ## Form
 
-{% highlight powershell %}
+{% highlight Powershell %}
 Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.Application]::EnableVisualStyles()
 {% endhighlight %}
 
-{% highlight powershell %}
+{% highlight sh %}
 $Form = New-Object system.Windows.Forms.Form
 $Form.ClientSize = New-Object System.Drawing.Point(450, 570)
 $Form.text = "SJ Password Reset Tool"
@@ -105,9 +105,9 @@ $ErrorText.ForeColor = [System.Drawing.ColorTranslator]::FromHtml("#d0021b")
 {% endhighlight %}
 
 {% highlight powershell %}
-$Form.controls.AddRange(@($Label1, $UserNameTxtBox, $Button1, $ResultText, $ErrorText, $Pb_Logo, $Label2, \$Label3 ))
+$Form.controls.AddRange(@($Label1, $UserNameTxtBox, $Button1, $ResultText, $ErrorText, $Pb_Logo, $Label2,\$Label3 ))
 {% endhighlight %}
 
-{% highlight powershell %}
-\$Button1.Add_Click( { reset-password })
+{% highlight html %}
+\$Button1.Add_Click({ reset-password })
 {% endhighlight %}
